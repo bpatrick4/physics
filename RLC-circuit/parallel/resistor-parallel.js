@@ -1,4 +1,11 @@
 // resistors in parallel
+const voltage = 12;
+const resistorOne = 200;
+const resistorTwo = 200;
+const resistorThree = 200;
+const resistorFour = 200;
+const round = 2;
+
 
 //functions
 function parallelOutputTwo(resistorOne, resistorTwo) {
@@ -8,7 +15,6 @@ function parallelOutputTwo(resistorOne, resistorTwo) {
   let totalVar = (resistorOneVar + resistorTwoVar);
   let result = (1 / totalVar);
 
-  const round = 2
   result = (result.toFixed(round))
   return result;
 }
@@ -21,7 +27,6 @@ function parallelOutputThree(resistorOne, resistorTwo, resistorThree) {
   let totalVar = (resistorOneVar + resistorTwoVar + resistorThreeVar);
   let result = (1 / totalVar);
 
-  const round = 2
   result = (result.toFixed(round))
   return result;
 }
@@ -35,32 +40,26 @@ function parallelOutputFour(resistorOne, resistorTwo, resistorThree, resistorFou
   let totalVar = (resistorOneVar + resistorTwoVar + resistorThreeVar + resistorFourVar);
   let result = (1 / totalVar);
 
-  const round = 2
   result = (result.toFixed(round))
   return result;
 }
 
 // input resistor values below
-console.log("two resistors in parallel \ntotal resistance: " +
-  parallelOutputTwo(
-    200, // resistor one value
-    200, // resistor two value
-  ) + " ohms\n"
+console.log("using a " + voltage + "v source will return the following values: \n")
+console.log(
+`${resistorOne}, ${resistorTwo} in parallel
+- total resistance: ${parallelOutputTwo(resistorOne, resistorTwo)} ohms
+- total current: ${(voltage / parallelOutputTwo(resistorOne, resistorTwo)).toFixed(round)} amps\n`
 )
 
-console.log("three resistors in parallel \ntotal resistance: " +
-  parallelOutputThree(
-    200, // resistor one value
-    200, // resistor two value
-    200, // resistor three value
-  ) + " ohms\n"
+console.log(
+`${resistorOne}, ${resistorTwo}, ${resistorThree} in parallel
+- total resistance: ${parallelOutputThree(resistorOne, resistorTwo, resistorThree)} ohms
+- total current: ${(voltage / parallelOutputThree(resistorOne, resistorTwo, resistorThree)).toFixed(round)} amps\n`
 )
 
-console.log("four resistors in parallel \ntotal resistance: " +
-  parallelOutputFour(
-    200, // resistor one value
-    200, // resistor two value
-    200, // resistor three value
-    200, // resistor four value
-  ) + " ohms\n"
+console.log(
+`${resistorOne}, ${resistorTwo}, ${resistorThree}, ${resistorFour} in parallel
+- total resistance: ${parallelOutputFour(resistorOne, resistorTwo, resistorThree, resistorFour)} ohms
+- total current: ${(voltage / parallelOutputFour(resistorOne, resistorTwo, resistorThree, resistorFour)).toFixed(round)} amps\n`
 )
