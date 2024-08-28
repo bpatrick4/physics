@@ -46,7 +46,7 @@ function parallelOutputFour(inductorOne, inductorTwo, inductorThree, inductorFou
   return result;
 }
 
-// input inductor values below
+// log output to console
 console.log("using a " + voltage + "v source will return the following values: \n")
 console.log(
 `${inductorOne}H, ${inductorTwo}H in parallel

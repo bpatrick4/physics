@@ -44,7 +44,7 @@ function parallelOutputFour(resistorOne, resistorTwo, resistorThree, resistorFou
   return result;
 }
 
-// input resistor values below
+// log output to console
 console.log("using a " + voltage + "v source will return the following values: \n")
 console.log(
 `${resistorOne}ohms, ${resistorTwo}ohms in parallel

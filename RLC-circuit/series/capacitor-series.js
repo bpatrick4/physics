@@ -1,9 +1,9 @@
 // capacitors in series
 const voltage = 12;
-const capacitorOne = 200;
-const capacitorTwo = 200;
-const capacitorThree = 200;
-const capacitorFour = 200;
+const capacitorOne = 47;
+const capacitorTwo = 47;
+const capacitorThree = 47;
+const capacitorFour = 47;
 const round = 2;
 
 //functions
@@ -46,27 +46,22 @@ function seriesOutputFour(capacitorOne, capacitorTwo, capacitorThree, capacitorF
   return result;
 }
 
-// input capacitor values below
-console.log("two capacitors in series \ntotal capacitance: " +
-  seriesOutputTwo(
-    4700, // capacitor one value
-    2200, // capacitor two value
-  ) + " farads\n"
+// log output to console
+console.log("using a " + voltage + "v source will return the following values: \n")
+console.log(
+`${capacitorOne}F, ${capacitorTwo}F in series
+- total capacitance: ${seriesOutputTwo(capacitorOne, capacitorTwo)} farads
+- total current: ${(voltage * seriesOutputTwo(capacitorOne, capacitorTwo)).toFixed(round)} amp-seconds\n`
 )
 
-console.log("three capacitors in series \ntotal capacitance: " +
-  seriesOutputThree(
-    2200, // capacitor one value
-    2200, // capacitor two value
-    2200, // capacitor three value
-  ) + " farads\n"
+console.log(
+`${capacitorOne}F, ${capacitorTwo}F, ${capacitorThree}F in series
+- total capacitance: ${seriesOutputThree(capacitorOne, capacitorTwo, capacitorThree)} farads
+- total current: ${(voltage * seriesOutputThree(capacitorOne, capacitorTwo, capacitorThree)).toFixed(round)} amp-seconds\n`
 )
 
-console.log("four capacitors in series \ntotal capacitance: " +
-  seriesOutputFour(
-    1500, // capacitor one value
-    1500, // capacitor two value
-    1500, // capacitor three value
-    1500, // capacitor four value
-  ) + " farads\n"
+console.log(
+`${capacitorOne}F, ${capacitorTwo}F, ${capacitorThree}F, ${capacitorFour}F in series
+- total capacitance: ${seriesOutputFour(capacitorOne, capacitorTwo, capacitorThree, capacitorFour)} farads
+- total current: ${(voltage * seriesOutputFour(capacitorOne, capacitorTwo, capacitorThree, capacitorFour)).toFixed(round)} amp-seconds\n`
 )
