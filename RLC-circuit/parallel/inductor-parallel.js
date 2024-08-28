@@ -1,4 +1,4 @@
-// inductors in parallel
+// inductors in parallel 1 V = 1 H * 1 A/s
 const voltage = 12;
 const inductorOne = 200;
 const inductorTwo = 200;
@@ -47,21 +47,21 @@ function parallelOutputFour(inductorOne, inductorTwo, inductorThree, inductorFou
 }
 
 // log output to console
-console.log("to get a back emf generation of " + voltage + "v: \n")
+console.log(`using a ${voltage}v source will return the following values:\n`)
 console.log(
 `${inductorOne}H, ${inductorTwo}H in parallel
 - total inductance: ${parallelOutputTwo(inductorOne, inductorTwo)} henries
-- current should be: ${(voltage / parallelOutputTwo(inductorOne, inductorTwo)).toFixed(round)} amps/second\n`
+- current will increase by: ${(voltage / parallelOutputTwo(inductorOne, inductorTwo)).toFixed(round)} amps/second\n`
 )
 
 console.log(
 `${inductorOne}H, ${inductorTwo}H, ${inductorThree}H in parallel
 - total inductance: ${parallelOutputThree(inductorOne, inductorTwo, inductorThree)} henries
-- current should be: ${(voltage / parallelOutputThree(inductorOne, inductorTwo, inductorThree)).toFixed(round)} amps/second\n`
+- current will increase by: ${(voltage / parallelOutputThree(inductorOne, inductorTwo, inductorThree)).toFixed(round)} amps/second\n`
 )
 
 console.log(
 `${inductorOne}H, ${inductorTwo}H, ${inductorThree}H, ${inductorFour}H in parallel
 - total inductance: ${parallelOutputFour(inductorOne, inductorTwo, inductorThree, inductorFour)} henries
-- current should be: ${(voltage / parallelOutputFour(inductorOne, inductorTwo, inductorThree, inductorFour)).toFixed(round)} amps/second\n`
+- current will increase by: ${(voltage / parallelOutputFour(inductorOne, inductorTwo, inductorThree, inductorFour)).toFixed(round)} amps/second\n`
 )

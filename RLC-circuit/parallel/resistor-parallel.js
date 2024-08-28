@@ -1,4 +1,4 @@
-// resistors in parallel
+// resistors in parallel V = I * R, P = I * V
 const voltage = 12;
 const resistorOne = 100;
 const resistorTwo = 200;
@@ -45,7 +45,7 @@ function parallelOutputFour(resistorOne, resistorTwo, resistorThree, resistorFou
 }
 
 // log output to console
-console.log("using a " + voltage + "v source will return the following values: \n")
+console.log(`using a ${voltage}v source will return the following values:\n`)
 console.log(
 `${resistorOne}ohms, ${resistorTwo}ohms in parallel
 - total resistance: ${parallelOutputTwo(resistorOne, resistorTwo)} ohms
