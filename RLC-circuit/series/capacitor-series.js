@@ -1,4 +1,10 @@
 // capacitors in series
+const voltage = 12;
+const capacitorOne = 200;
+const capacitorTwo = 200;
+const capacitorThree = 200;
+const capacitorFour = 200;
+const round = 2;
 
 //functions
 function seriesOutputTwo(capacitorOne, capacitorTwo) {

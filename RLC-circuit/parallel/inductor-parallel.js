@@ -1,4 +1,10 @@
 // inductors in parallel
+const voltage = 12;
+const inductorOne = 200;
+const inductorTwo = 200;
+const inductorThree = 200;
+const inductorFour = 200;
+const round = 2;
 
 //functions
 function parallelOutputTwo(inductorOne, inductorTwo) {
@@ -41,26 +47,21 @@ function parallelOutputFour(inductorOne, inductorTwo, inductorThree, inductorFou
 }
 
 // input inductor values below
-console.log("two inductors in parallel \ntotal inductance: " +
-  parallelOutputTwo(
-    200, // inductor one value
-    200, // inductor two value
-  ) + " henries\n"
+console.log("using a " + voltage + "v source will return the following values: \n")
+console.log(
+`${inductorOne}H, ${inductorTwo}H in parallel
+- total inductance: ${parallelOutputTwo(inductorOne, inductorTwo)} henries
+- total current: ${(voltage / parallelOutputTwo(inductorOne, inductorTwo)).toFixed(round)} amps/second\n`
 )
 
-console.log("three inductors in parallel \ntotal inductance: " +
-  parallelOutputThree(
-    200, // inductor one value
-    200, // inductor two value
-    200, // inductor three value
-  ) + " henries\n"
+console.log(
+`${inductorOne}H, ${inductorTwo}H, ${inductorThree}H in parallel
+- total inductance: ${parallelOutputThree(inductorOne, inductorTwo, inductorThree)} henries
+- total current: ${(voltage / parallelOutputThree(inductorOne, inductorTwo, inductorThree)).toFixed(round)} amps/second\n`
 )
 
-console.log("four inductors in parallel \ntotal inductance: " +
-  parallelOutputFour(
-    200, // inductor one value
-    200, // inductor two value
-    200, // inductor three value
-    200, // inductor four value
-  ) + " henries\n"
+console.log(
+`${inductorOne}H, ${inductorTwo}H, ${inductorThree}H, ${inductorFour}H in parallel
+- total inductance: ${parallelOutputFour(inductorOne, inductorTwo, inductorThree, inductorFour)} henries
+- total current: ${(voltage / parallelOutputFour(inductorOne, inductorTwo, inductorThree, inductorFour)).toFixed(round)} amps/second\n`
 )
