@@ -1,9 +1,9 @@
 // resistors in parallel
 const voltage = 12;
-const resistorOne = 200;
+const resistorOne = 100;
 const resistorTwo = 200;
-const resistorThree = 200;
-const resistorFour = 200;
+const resistorThree = 300;
+const resistorFour = 400;
 const round = 2;
 
 
@@ -49,17 +49,20 @@ console.log("using a " + voltage + "v source will return the following values: \
 console.log(
 `${resistorOne}ohms, ${resistorTwo}ohms in parallel
 - total resistance: ${parallelOutputTwo(resistorOne, resistorTwo)} ohms
-- total current: ${(voltage / parallelOutputTwo(resistorOne, resistorTwo)).toFixed(round)} amps\n`
+- total current: ${(voltage / parallelOutputTwo(resistorOne, resistorTwo)).toFixed(round)} amps
+- total power: ${(voltage * (voltage / parallelOutputTwo(resistorOne, resistorTwo))).toFixed(round)} watts\n`
 )
 
 console.log(
 `${resistorOne}ohms, ${resistorTwo}ohms, ${resistorThree}ohms in parallel
 - total resistance: ${parallelOutputThree(resistorOne, resistorTwo, resistorThree)} ohms
-- total current: ${(voltage / parallelOutputThree(resistorOne, resistorTwo, resistorThree)).toFixed(round)} amps\n`
+- total current: ${(voltage / parallelOutputThree(resistorOne, resistorTwo, resistorThree)).toFixed(round)} amps
+- total power: ${(voltage * (voltage / parallelOutputThree(resistorOne, resistorTwo, resistorThree))).toFixed(round)} watts\n`
 )
 
 console.log(
 `${resistorOne}ohms, ${resistorTwo}ohms, ${resistorThree}ohms, ${resistorFour}ohms in parallel
 - total resistance: ${parallelOutputFour(resistorOne, resistorTwo, resistorThree, resistorFour)} ohms
-- total current: ${(voltage / parallelOutputFour(resistorOne, resistorTwo, resistorThree, resistorFour)).toFixed(round)} amps\n`
+- total current: ${(voltage / parallelOutputFour(resistorOne, resistorTwo, resistorThree, resistorFour)).toFixed(round)} amps
+- total power: ${(voltage * (voltage / parallelOutputFour(resistorOne, resistorTwo, resistorThree, resistorFour))).toFixed(round)} watts\n`
 )
