@@ -14,7 +14,7 @@ displacement:
 average velocity:
 - avg(v) = displacement / timeElapsed
 
-velocity:
+final velocity:
 - v = v0 + a(t)
 
 acceleration:
