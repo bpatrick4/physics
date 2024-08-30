@@ -8,8 +8,14 @@ one-dimensional motion:
 
 - acceleration -  a change in velocity over time
 
-acceleration
-V = v0 + (a * t)
+displacement:
+- x - x0 = v0(t) + 1/2 * a(t)^2
 
-displacement
-(x - x0) = (v0 * t) + (1/2 * a * t^2)
+average velocity:
+- avg(v) = displacement / timeElapsed
+
+velocity:
+- v = v0 + a(t)
+
+acceleration:
+- a = 2 * (s - v0(t)) / t^2
