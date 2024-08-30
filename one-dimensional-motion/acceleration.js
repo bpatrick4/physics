@@ -1,19 +1,20 @@
-function acceleration(timeElapsed, initialPosition, position, initialVelocity) {
-  let deltaPostition = (position - initialPosition); //change in position
-  let variableOne = (initialVelocity * timeElapsed);
-  let variableTwo = (2 * (deltaPostition - variableOne));
-  let result = (variableTwo / (timeElapsed * timeElapsed))
+// find acceleration
+const timeElapsed = 60; // seconds (t)
+const initialPosition = 0; // meters (x0)
+const finalPosition = 36000; // meters (x)
+const initialVelocity = 0; // meters / second (v0)
+const round = 2; // accuracy
+
+// a = 2 * (s - v0(t)) / t^2
+function findAcceleration(timeElapsed, initialPosition, finalPosition, initialVelocity) {
+  let displacement = (finalPosition - initialPosition); // s
+  let variableOne = (initialVelocity * timeElapsed);// v0(t)
+  let variableTwo = (2 * (displacement - variableOne)); // 2 * (s - v0(t))
   
-  const round = 2
-  result = (result.toFixed(round))
+  let result = (variableTwo / (timeElapsed * timeElapsed)); 
+  result = (result.toFixed(round));
   return result;
 }
 
-console.log("acceleration: " +
-  acceleration(
-    10, // timeElapsed ( s )
-    0, // initialPosition ( m )
-    1500, // position ( m )
-    0, // initialVelocity ( m/s )
-  ) + " m/s^2"
-)
+// log output
+console.log(`acceleration: ${findAcceleration(timeElapsed, initialPosition, finalPosition, initialVelocity)} m/s^2`);
