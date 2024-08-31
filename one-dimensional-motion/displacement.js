@@ -12,8 +12,10 @@ function findDisplacement(timeElapsed, initialPosition, initialVelocity, acceler
 
   let result = (initialPosition + variableOne + variableTwo);
   result = (result.toFixed(round));
+
+  console.log(`displacement: ${result} m`);
   return result;
 }
 
-// log output
-console.log(`displacement: ${findDisplacement(timeElapsed, initialPosition, initialVelocity, acceleration)} m`);
+// call function
+findDisplacement(timeElapsed, initialPosition, initialVelocity, acceleration)

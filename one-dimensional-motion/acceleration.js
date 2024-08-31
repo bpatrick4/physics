@@ -13,8 +13,10 @@ function findAcceleration(timeElapsed, initialPosition, finalPosition, initialVe
   
   let result = (variableTwo / (timeElapsed * timeElapsed)); 
   result = (result.toFixed(round));
+
+  console.log(`acceleration: ${result} m/s^2`);
   return result;
 }
 
-// log output
-console.log(`acceleration: ${findAcceleration(timeElapsed, initialPosition, finalPosition, initialVelocity)} m/s^2`);
+// call function
+findAcceleration(timeElapsed, initialPosition, finalPosition, initialVelocity)
