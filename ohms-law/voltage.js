@@ -1,8 +1,9 @@
-// input two known values and leave one as: 0
-const I = 8; // current (a)
-const R = 4; // resistance (ohms)
-const P = 256; // power (watts)
+// input at least two * values
+const I = 8; // current (a) *
+const R = 4; // resistance (ohms) *
+const P = 256; // power (watts) *
 const round = 2; // accuracy
+const t = 3600; // time in seconds (1hr = 3600s)
 
 // functions
 function findVoltageByIR(current, resistance) {
@@ -15,8 +16,13 @@ function findVoltageByIR(current, resistance) {
   `voltage: ${voltage.toFixed(round)} v\n` +
   `current: ${current.toFixed(round)} a\n` +
   `resistance: ${resistance.toFixed(round)} ohms\n` +
-  `power: ${power.toFixed(round)} watts\n`
+  `power: ${power.toFixed(round)} watts`
   )}
+  if (t == 0) {
+  console.log(``);
+  } else {
+  console.log(`energy: ${power * t} joules\n`);
+  }
 }
 
 function findVoltageByPI(power, current) {
@@ -29,8 +35,13 @@ function findVoltageByPI(power, current) {
   `voltage: ${voltage.toFixed(round)} v\n` +
   `current: ${current.toFixed(round)} a\n` +
   `resistance: ${resistance.toFixed(round)} ohms\n` +
-  `power: ${power.toFixed(round)} watts\n`
+  `power: ${power.toFixed(round)} watts`
   )}
+  if (t == 0) {
+    console.log(``);
+  } else {
+  console.log(`energy: ${power * t} joules\n`);
+  }
 }
 
 function findVoltageByPR(power, resistance) {
@@ -43,8 +54,13 @@ function findVoltageByPR(power, resistance) {
   `voltage: ${voltage.toFixed(round)} v\n` +
   `current: ${current.toFixed(round)} a\n` +
   `resistance: ${resistance.toFixed(round)} ohms\n` +
-  `power: ${power.toFixed(round)} watts\n`
+  `power: ${power.toFixed(round)} watts`
   )}
+  if (t == 0) {
+    console.log(``);
+  } else {
+  console.log(`energy: ${power * t} joules\n`);
+  }
 }
 
 // call functions

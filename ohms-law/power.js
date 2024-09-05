@@ -3,6 +3,7 @@ const V = 32; // voltage (v)
 const I = 8; // current (a)
 const R = 4; // resistance (ohms)
 const round = 2; // accuracy
+const t = 3600; // time in seconds (1hr = 3600s)
 
 // functions
 function findPowerByIR(current, resistance) {
@@ -15,8 +16,13 @@ function findPowerByIR(current, resistance) {
   `voltage: ${voltage.toFixed(round)} v\n` +
   `current: ${current.toFixed(round)} a\n` +
   `resistance: ${resistance.toFixed(round)} ohms\n` +
-  `power: ${power.toFixed(round)} watts\n`
+  `power: ${power.toFixed(round)} watts`
   )}
+  if (t == 0) {
+    console.log(``);
+  } else {
+  console.log(`energy: ${power * t} joules\n`);
+  }
 }
 
 function findPowerByVI(voltage, current) {
@@ -29,8 +35,13 @@ function findPowerByVI(voltage, current) {
   `voltage: ${voltage.toFixed(round)} v\n` +
   `current: ${current.toFixed(round)} a\n` +
   `resistance: ${resistance.toFixed(round)} ohms\n` +
-  `power: ${power.toFixed(round)} watts\n`
+  `power: ${power.toFixed(round)} watts`
   )}
+  if (t == 0) {
+    console.log(``);
+  } else {
+  console.log(`energy: ${power * t} joules\n`);
+  }
 }
 
 function findPowerByVR(voltage, resistance) {
@@ -43,8 +54,13 @@ function findPowerByVR(voltage, resistance) {
   `voltage: ${voltage.toFixed(round)} v\n` +
   `current: ${current.toFixed(round)} a\n` +
   `resistance: ${resistance.toFixed(round)} ohms\n` +
-  `power: ${power.toFixed(round)} watts\n`
+  `power: ${power.toFixed(round)} watts`
   )}
+  if (t == 0) {
+    console.log(``);
+  } else {
+  console.log(`energy: ${power * t} joules\n`);
+  }
 }
 
 // call functions

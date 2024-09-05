@@ -3,6 +3,7 @@ const V = 32; // voltage (v)
 const R = 4; // resistance (ohms)
 const P = 256; // power (watts)
 const round = 2; // accuracy
+const t = 3600; // time in seconds (1hr = 3600s)
 
 // functions
 function findCurrentByVR(voltage, resistance) {
@@ -15,8 +16,13 @@ function findCurrentByVR(voltage, resistance) {
   `voltage: ${voltage.toFixed(round)} v\n` +
   `current: ${current.toFixed(round)} a\n` +
   `resistance: ${resistance.toFixed(round)} ohms\n` +
-  `power: ${power.toFixed(round)} watts\n`
+  `power: ${power.toFixed(round)} watts`
   )}
+  if (t == 0) {
+    console.log(``);
+  } else {
+  console.log(`energy: ${power * t} joules\n`);
+  }
 }
 
 function findCurrentByPV(power, voltage) {
@@ -29,8 +35,13 @@ function findCurrentByPV(power, voltage) {
   `voltage: ${voltage.toFixed(round)} v\n` +
   `current: ${current.toFixed(round)} a\n` +
   `resistance: ${resistance.toFixed(round)} ohms\n` +
-  `power: ${power.toFixed(round)} watts\n`
+  `power: ${power.toFixed(round)} watts`
   )}
+  if (t == 0) {
+    console.log(``);
+  } else {
+  console.log(`energy: ${power * t} joules\n`);
+  }
 }
 
 function findCurrentByPR(power, resistance) {
@@ -43,8 +54,13 @@ function findCurrentByPR(power, resistance) {
   `voltage: ${voltage.toFixed(round)} v\n` +
   `current: ${current.toFixed(round)} a\n` +
   `resistance: ${resistance.toFixed(round)} ohms\n` +
-  `power: ${power.toFixed(round)} watts\n`
+  `power: ${power.toFixed(round)} watts`
   )}
+  if (t == 0) {
+    console.log(``);
+  } else {
+  console.log(`energy: ${power * t} joules\n`);
+  }
 }
 
 // call functions
