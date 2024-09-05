@@ -34,7 +34,9 @@ energy:
 - joules = watts * seconds
 
 terms:
-- charge - the physical property of matter that causes it to experience a force when placed in an electro-magnetic field.
+- charge - the physical property of matter that causes it to experience a force when placed in an electro-magnetic field
+
+- voltage - electrical potential difference between two points
 
 - current - charge per second through a conductor
 
