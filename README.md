@@ -14,7 +14,9 @@ acceleration:
 terms:
 - time - number of seconds that pass during motion
 
-- position - physical spot on timeline
+- position - physical spot on timeline/axis
+
+- velocity - a change in position over time
 
 - acceleration - a change in velocity over time
 
@@ -32,7 +34,7 @@ energy:
 - joules = watts * seconds
 
 terms:
-- charge - the physical property of matter that causes it to experience a force when placed in an electro magnetic field.
+- charge - the physical property of matter that causes it to experience a force when placed in an electro-magnetic field.
 
 - current - charge per second through a conductor
 
