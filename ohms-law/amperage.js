@@ -1,5 +1,5 @@
 // input two known values and leave one as: 0
-const V = 32; // voltage (v)
+const V = 32; // voltage (volts)
 const R = 4; // resistance (ohms)
 const P = 256; // power (watts)
 const round = 2; // accuracy

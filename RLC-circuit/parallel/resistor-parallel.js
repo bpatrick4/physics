@@ -1,7 +1,7 @@
 // resistors in parallel V = I * R, P = I * V
 const voltage = 12;
-const resistorOne = 100;
-const resistorTwo = 200;
+const resistorOne = 4;
+const resistorTwo = 4;
 const resistorThree = 300;
 const resistorFour = 400;
 const round = 2;

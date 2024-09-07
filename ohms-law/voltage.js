@@ -1,5 +1,5 @@
 // input at least two * values
-const I = 8; // current (a) *
+const I = 8; // current (amps) *
 const R = 4; // resistance (ohms) *
 const P = 256; // power (watts) *
 const round = 2; // accuracy

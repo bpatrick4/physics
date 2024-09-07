@@ -1,6 +1,6 @@
 // 1 coulomb = amperes * seconds
-const V = 14; // voltage in volts
-const I = .4; // current in amperes
+const V = 14; // voltage (volts)
+const I = .4; // current (amps)
 const t = 3600; // time in seconds
 const round = 2; // accuracy
 

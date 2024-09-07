@@ -1,6 +1,6 @@
 // input two known values and leave one as: 0
-const V = 32; // voltage (v)
-const I = 8; // current (a)
+const V = 32; // voltage (volts)
+const I = 8; // current (amps)
 const R = 4; // resistance (ohms)
 const round = 2; // accuracy
 const t = 3600; // time in seconds (1hr = 3600s)
