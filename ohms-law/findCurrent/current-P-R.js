@@ -1,6 +1,6 @@
 // input values
 const R = 4; // resistance (ohms)
-const P = 300; // power (watts)
+const P = 256; // power (watts)
 const round = 2; // accuracy
 const t = 1800; // time in seconds (1hr = 3600s)
 
@@ -23,7 +23,7 @@ function getEnergy(power, seconds) {
 
 // output to console
 console.log(
-`a '${R} ohm' load consuming '${P}' watts of power must have:
+`a '${R} ohm' load consuming '${P} watts' of power must have:
 - a current draw of '${getCurrent(P, R)} amps' 
 - a voltage of '${getVoltage(P)} volts'
 - an energy consumption of '${getEnergy(P, t)} joules'
