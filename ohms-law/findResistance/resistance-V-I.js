@@ -15,8 +15,9 @@ function getPower(amperage, voltage) {
   return power.toFixed(round)
 }
 
-function getEnergy(amperage, voltage, seconds) { 
-  const energy = ( amperage * voltage * seconds );
+function getEnergy(seconds) { 
+  const power = getPower(I, V)
+  const energy = ( power * seconds );
   return energy.toFixed(round)
 }
 
@@ -25,6 +26,6 @@ console.log(
 `a '${V} volt' source delivering '${I} amps' of current must have:
 - an overall resistance of '${getResistance(V, I)} ohms'
 - a power consumption of '${getPower(I, V)} watts'
-- an energy consumption of '${getEnergy(I, V, t)} joules'
+- an energy consumption of '${getEnergy(t)} joules'
 (if this source is on for '${ t / 3600 } hour(s)')`
 )
