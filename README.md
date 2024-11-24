@@ -1,17 +1,17 @@
 ## one-dimensional motion:
-displacement:
+### displacement:
 - x - x0 = v0(t) + 1/2 * a(t)^2
 
-average velocity:
+### average velocity:
 - avg(v) = displacement / timeElapsed
 
-final velocity:
+### final velocity:
 - v = v0 + a(t)
 
-acceleration:
+### acceleration:
 - a = 2 * (s - v0(t)) / t^2
 
-terms:
+### terms:
 - time - number of seconds that pass during motion
 
 - position - physical spot on timeline/axis
@@ -21,19 +21,19 @@ terms:
 - acceleration - a change in velocity over time
 
 ## electricity
-charge:
+### charge:
 - coulomb = amperes * seconds
 
-current:
+### current:
 - amperes = voltage / resistance
 
-power:
+### power:
 - watts = amperes * voltage
 
-energy: 
+### energy: 
 - joules = watts * seconds
 
-terms:
+### terms:
 - charge - the physical property of matter that causes it to experience a force when placed in an electro-magnetic field
 
 - voltage - electrical potential difference between two points
